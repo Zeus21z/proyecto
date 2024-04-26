@@ -1,0 +1,168 @@
+/* Big tablets to 1200 px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%; /* Ajusta el ancho y el relleno de la caja de texto del héroe */
+    }
+
+    .row { padding: 0 2%; } /* Ajusta el relleno de la fila */
+}
+
+
+/* Small tablets to big tablets from 768 to 1023 px */
+@media only screen and (max-width: 1023px) {
+    body { font-size: 18px; } /* Ajusta el tamaño de la fuente del cuerpo */
+
+    section { padding: 60px 0; } /* Ajusta el relleno de la sección */
+
+    .long-copy {
+        width: 80%;
+        margin-left: 10%; /* Ajusta el ancho y el margen izquierdo de la copia larga */
+    }
+
+    .steps-box { margin-top: 10px; } /* Ajusta el margen superior de la caja de pasos */
+
+    .steps-box:last-child { margin-top: 10px; } /* Ajusta el margen superior del último hijo de la caja de pasos */
+    
+    .works-step { margin-bottom: 40px; } /* Ajusta el margen inferior del paso de trabajo */
+
+    .works-step:last-of-type { margin-bottom: 60px; } /* Ajusta el margen inferior del último tipo de paso de trabajo */
+
+    .app-screen { width: 50%; } /* Ajusta el ancho de la pantalla de la aplicación */
+
+    .icon-small { 
+        width: 17px;
+        margin-right: 10px;
+     } /* Ajusta el tamaño y el margen derecho del icono pequeño */
+
+    .city-feature { font-size: 90%; } /* Ajusta el tamaño de fuente de la característica de la ciudad */
+
+    .plan-box {
+        width: 100%;
+        margin-left: 0; /* Ajusta el ancho y el margen izquierdo de la caja de plan */
+    }
+
+    .plan-price {
+        font-size: 250%;
+    } /* Ajusta el tamaño de la fuente del precio del plan */
+
+    .contact-form {
+        width: 90%; /* Ajusta el ancho del formulario de contacto */
+    }
+}
+
+
+/* Small phones to small tablets from 481 to 767 px */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px; /* Ajusta el tamaño de la fuente del cuerpo */
+    }
+
+    section { padding: 30px 0; } /* Ajusta el relleno de la sección */
+
+    .row, .hero-text-box { padding: 0 4%; } /* Ajusta el relleno de la fila y la caja de texto del héroe */
+
+    .col { 
+        width: 100%;
+        margin: 0 0 4% 0;
+     } /* Ajusta el ancho y el margen de las columnas */
+
+     /* NAVEGACIÓN MÓVIL */
+    .main-nav { display: none; } /* Oculta la navegación principal */
+    
+    .mobile-nav-icon {
+        display: inline-block; /* Muestra el icono de navegación móvil */
+    }
+
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 25px; /* Ajusta los márgenes y la posición de la navegación principal */
+    }
+
+    .main-nav li {
+        display: block;
+    }
+
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        padding: 10px 0;
+        font-size: 100%;
+    }
+
+    .main-nav li a:link::after,
+    .main-nav li a:visited::after {
+        display: none; /* Oculta el efecto del enlace */
+    }
+
+    .sticky .main-nav { margin-top: 10px; } /* Ajusta el margen superior de la navegación fija */
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited { padding: 10px 0; } /* Ajusta el relleno de la navegación fija */
+    .sticky .mobile-nav-icon { margin-top: 10px; } /* Ajusta el margen superior del icono de navegación móvil */
+    .sticky .mobile-nav-icon i { color: #555; } /* Ajusta el color del icono de navegación móvil */
+
+
+
+
+    h1 { font-size: 180%; } /* Ajusta el tamaño de la fuente de h1 */
+
+    h2 { font-size: 150%; } /* Ajusta el tamaño de la fuente de h2 */
+
+    .long-copy {
+        width: 100%;
+        margin-left: 0; /* Ajusta el ancho y el margen izquierdo de la copia larga */
+    }
+
+    .app-screen { width: 40%; } /* Ajusta el ancho de la pantalla de la aplicación */
+
+    .steps-box:first-child {
+        text-align: center; /* Ajusta el alineamiento del primer hijo de la caja de pasos */
+    }
+
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        margin-right: 15px;
+        padding: 4px;
+        font-size: 120%;
+    }
+    
+    .works-step { margin-bottom: 20px; } /* Ajusta el margen inferior del paso de trabajo */
+
+    .works-step:last-of-type { margin-bottom: 20px; } /* Ajusta el margen inferior del último tipo de paso de trabajo */
+
+    .plan-box div { text-align: center; } /* Ajusta el alineamiento del contenido de la caja de plan */
+
+    /* MAPA */
+    .map-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .map {
+        width: 100%;
+        height: 300px;
+        position: relative;
+        z-index: 0;
+    }
+    
+    .form-box {
+        position: relative;
+        height:auto;
+        width: 100%;
+        padding: 30px 0;
+    }
+
+}
+
+
+/* Small phones from 0 to 480 px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; } /* Ajusta el relleno de la sección */
+
+    .contact-form { width: 100%; } /* Ajusta el ancho del formulario de contacto */
+}
+
