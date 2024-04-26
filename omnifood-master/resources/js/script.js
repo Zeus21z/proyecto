@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // MAKING STICKY NAV
+    // HACIENDO EL MENÚ PEGAJOSO
     var waypoint = new Waypoint({
         element: document.getElementsByClassName('js--section-features'),
         handler: function(direction) {
@@ -14,7 +14,7 @@ $(document).ready(function() {
         offset: '60px'
       });
 
-    //   SCROLL ON BUTTONS
+    //   DESPLAZAMIENTO EN BOTONES
       $('.js--scroll-to-plans').click(function() {
         $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000);
       });
@@ -24,39 +24,40 @@ $(document).ready(function() {
       });
 
 
-    //   NAVIGATION SCROLL
+    //   DESPLAZAMIENTO DE NAVEGACIÓN
 
-            // Select all links with hashes
+            // Seleccionar todos los enlaces con anclajes
         $('a[href*="#"]')
-        // Remove links that don't actually link to anything
+        // Eliminar enlaces que en realidad no enlazan a nada
         .not('[href="#"]')
         .not('[href="#0"]')
         .click(function(event) {
-        // On-page links
+        // Enlaces internos
         if (
             location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
             && 
             location.hostname == this.hostname
         ) {
-            // Figure out element to scroll to
+            // Descubrir el elemento al que se desplazará
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            // Does a scroll target exist?
+            // ¿Existe un destino de desplazamiento?
             if (target.length) {
-            // Only prevent default if animation is actually gonna happen
+            /* Solo prevenir el comportamiento 
+            predeterminado si realmente va a suceder la animación*/
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top
             }, 1000, function() {
-                // Callback after animation
-                // Must change focus!
+                // Llamada devuelta despues de la animación
+                // ¡Debe cambiar el foco!
                 var $target = $(target);
                 $target.focus();
-                if ($target.is(":focus")) { // Checking if the target was focused
+                if ($target.is(":focus")) { // Verificar si el destino estaba enfocado
                 return false;
                 } else {
-                $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-                $target.focus(); // Set focus again
+                $target.attr('tabindex','-1'); // Agregar tabindex para los elementos no enfocables
+                $target.focus(); // Establecer el foco nuevamente
                 };
             });
             }
@@ -64,29 +65,29 @@ $(document).ready(function() {
     });
 
 
-    // ANIMATIONS ON SCROLL
-    // FOR THE FEATURES
+// ANIMACIONES EN DESPLAZAMIENTO
+// PARA LAS CARACTERÍSTICAS
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animated fadeIn');
     }, {
         offset: '50%'
     });
 
-    // FOR THE IPHONE IMG
+    // PARA EL IPHONE IMG
     $('.js--wp-2').waypoint(function(direction) {
         $('.js--wp-2').addClass('animated fadeInUp');
     }, {
         offset: '50%'
     });
 
-    // FOR THE CITIES
+    // PARA LAS CIUDADES
     $('.js--wp-3').waypoint(function(direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
         offset: '50%'
     });
 
-    // FOR THE PLANS
+    // // PARA LOS PLANES
     $('.js--wp-4').waypoint(function(direction) {
         $('.js--wp-4').addClass('animated pulse');
     }, {
@@ -94,12 +95,12 @@ $(document).ready(function() {
     });
 
 
-    // MOBILE NAVIGATION
+    // NAVEGACIÓN MÓVIL
     $('.js--nav-icon').click(function() {
         var nav  = $('.js--main-nav');
         var icon  = $('.js--nav-icon i');
 
-        // TO OPEN AND CLOSE NAV ON BUTTON CLICK
+        // PARA ABRIR Y CERRAR NAV EN EL BOTÓN HAGA CLIC
         nav.slideToggle(200);
 
         if(icon.hasClass('ion-navicon-round')) {
@@ -113,7 +114,7 @@ $(document).ready(function() {
 
     });
 
-    // MAPS
+    // MAPA
     var map  = new GMaps({
         div: '.map',
         lat: 38.7437396,
